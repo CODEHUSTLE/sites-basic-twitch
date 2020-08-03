@@ -1,26 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
   height: 100%;
+  font-family: 'Monoton', cursive;
+  width: 100wh;
+  height: 90vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  height: 65px;
+  background-color: #444034;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+  border-bottom: 4px solid #fed940;
+}
+
+main {
+  display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
-.main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.header-logo {
+  z-index: 999;
 }
 
 .content {
   width: 380px;
   padding: 20px;
   background-color: rgb(249, 203, 52);
-  border: 3px solid rgb(221, 180, 44);
-  border-radius: 8px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(249, 203, 52),
+    rgb(225, 179, 0)
+  );
+  border: 3px solid rgb(70, 64, 49);
+  border-radius: 25px;
+  box-shadow: #000 0px 0px 18px;
 }
 
 .content > form {
@@ -35,15 +98,39 @@ body {
   flex-direction: column;
 }
 
+.form-buttons {
+  margin-top: 22px;
+}
+
 .form-buttons button {
   font: bold 16px 'Arial';
-  background-color: #61512d;
-  border: 3px solid #444132;
   border-radius: 7px;
   color: #eee;
   padding: 5px 8px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+button[type='reset'] {
+  background-color: #61512d;
+  border: 3px solid #444132;
+}
+
+button[type='submit'] {
+  background-color: #61512d;
+  border: 3px solid #444132;
+}
+
+button[type='submit']:hover {
+  background-color: #83aa78;
+  border: 3px solid #6d9961;
+  color: #527449;
+}
+
+button[type='reset']:hover {
+  background-color: #b96e6e;
+  border: 3px solid #945858;
+  color: #744949;
 }
 
 input {
@@ -53,4 +140,12 @@ input {
   border: 3px solid #ddb42c;
   width: 300px;
   background-color: #f3f3f3;
+}
+
+label {
+  margin-top: 15px;
+  align-self: start;
+  left: 33px;
+  position: relative;
+  color: #444132;
 }
