@@ -5,6 +5,10 @@ const requestSchema = Schema({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+    required: true,
+  },
   street: {
     type: String,
     required: true,
@@ -20,6 +24,11 @@ const requestSchema = Schema({
   zip: {
     type: String,
     required: true,
+  },
+  created: {
+    type: Date,
+    required: true,
+    default: Date.now,
   },
 });
 
